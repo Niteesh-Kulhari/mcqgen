@@ -4,7 +4,7 @@ import traceback
 import pandas as pd
 from dotenv import load_dotenv
 from src.mcqgenerator.utils import read_file, get_table_data
-from src.mcqgenerator.logger import logginf
+from src.mcqgenerator.logger import logging
 
 
 from langchain.chat_models import ChatOpenAI
@@ -17,7 +17,7 @@ load_dotenv()
 
 key = os.getenv("OPENAI_API_KEY")
 
-llm = ChatOpenAI(openai_api_key=key, model_name="gpt-3.5-turbo", temprature=0.7)
+llm = ChatOpenAI(openai_api_key=key, model_name="gpt-3.5-turbo", temperature=0.7)
 
 
 TEMPLATE = """
